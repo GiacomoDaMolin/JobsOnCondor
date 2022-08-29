@@ -20,9 +20,9 @@ echo "This is my argument"
 echo "$1 $3 $4 $5 $6"
 echo "These are the rest"
 
-datafiles=$(dasgoclient -query="file dataset=root://cms-xrd-global.cern.ch///store/mc/RunIISummer20UL18NanoAODv2$2")
+#datafiles=$(dasgoclient -query="file dataset=root://cms-xrd-global.cern.ch///store/mc/RunIISummer20UL18NanoAODv2$2")
 
-#datafiles=$(dasgoclient -query="file dataset=$2")
+datafiles=$(dasgoclient -query="file dataset=$2")
 
 echo $datafiles
 
