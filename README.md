@@ -5,7 +5,8 @@ However the dasgoclient line does not work but I get the parsing error.
 
 ## Directory "python"
 same rationale of main directory but RunDataset is now a python script.
-However, I get a sintax error in the line
+However, I get a sintax error in the line:
+
 p = subprocess.Popen([f'dasgoclient --query="file dataset={dataset} instance=prod/phys03"'], 
 
 
@@ -19,4 +20,4 @@ However apparently one cannot call condor_submit in this way or a "Missing file 
 
 ## Directory Pre_Post script
 I was also trying to add a Post script to do hadd of the final files, but I was getting permission errors (even though I did chmod +x *)
-This is a completely second oreder problem
+This is a completely second order problem
