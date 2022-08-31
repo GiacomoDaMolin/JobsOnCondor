@@ -1,4 +1,31 @@
 # Main directory
+
+To create the description of the jobs needed to run over a dataset the following command can be used
+
+```
+sh RunDataset.sh -e myanalysis.py \
+    -d dataset_name \
+    -o output_dir
+    -x xsec \
+    -l integ_luminosity \
+    -s is_signal
+    -p full_path_to_proxy \
+    -c full_path_to_cmssw
+```
+
+The output is a `jobdescription.txt` file which will list all the arguments to be used to process single files.
+Before submitting to condor, test locally that a single file will be processed as desired by doing
+
+```
+sh RunDataset.sh `head -n 1 jobdescription.txt`
+```
+
+If all looks good you can submit to condor by doing
+
+```
+condor_submit jobdescription.sub
+```
+
 I use the following command: condor_submit CDataset.sub
 In CDataset I call as executable RunDataset.sh, which reads the parameters from the script .txt file and SHOULD parse the dataset and call the main executable (Mixed_Analysis) for each file & respective arguments.
 However the dasgoclient line does not work but I get the parsing error.
