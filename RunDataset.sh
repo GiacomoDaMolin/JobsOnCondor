@@ -9,7 +9,7 @@
 # -s the signal/bkgd flag
 # -p proxy path
 X509_USER_PROXY=/afs/cern.ch/user/g/gdamolin/private/x509up_u151129
-CMSSW=`pwd`
+CMSSW=/afs/cern.ch/user/g/gdamolin/CMSSW_12_4_1_patch1/src
 while getopts "e:d:o:x:l:s:p:c:" opt; do
     case "$opt" in
         e) EXE=$OPTARG
