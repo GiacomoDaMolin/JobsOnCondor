@@ -1,4 +1,4 @@
-basedir=/afs/cern.ch/user/p/psilva/work/CMSSW_10_6_20/src/JobsOnCondor
+basedir=/afs/cern.ch/user/g/gdamolin/jobs_subm/Condor
 executable=$(basedir)/RunDataset.sh
 
 should_transfer_files = YES

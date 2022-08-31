@@ -58,7 +58,8 @@ if [[ "$DATASET" == *"root://"* ]]; then
   echo "Dataset is already a single file, will run executable for it"
 
   filename=$DATASET
-  ofilename=${OUTPATH}/$filename"_MA".root
+  filestring=$(echo $filename | sed 's|\(^.*/\)\([a-z,A-Z,0-9,-]*\).root$|\2|')
+  ofilename=${OUTPATH}/$filestring"_MA".root
 
   cd $CMSSW
   eval `scram r -sh`
@@ -78,7 +79,7 @@ else
   jobdescription="jobdescription.txt"
   rm ${jobdescription}
   for file in ${datafiles[@]}; do
-      echo "-e ${EXE} -d root://cms-xrd-global.cern.ch//${file} -o ${OUTPATH} -x ${XSEC} -l ${LUMI} -s ${SIGNAL} -p ${X509_USER_PROXY}" >> ${jobdescription} 
+      echo "-e ${EXE} -d root://cms-xrd-global.cern.ch//${file} -o ${OUTPATH} -x ${XSEC} -l ${LUMI} -s ${SIGNAL} -p ${X509_USER_PROXY} -c $CMSSW" >> ${jobdescription} 
   done
   echo "Use ${jobdescription} with your condor file"
 
