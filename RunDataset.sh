@@ -9,7 +9,8 @@
 # -s the signal/bkgd flag
 # -p proxy path
 X509_USER_PROXY=/afs/cern.ch/user/g/gdamolin/private/x509up_u151129
-while getopts "e:d:o:x:l:s:p:" opt; do
+CMSSW=`pwd`
+while getopts "e:d:o:x:l:s:p:c:" opt; do
     case "$opt" in
         e) EXE=$OPTARG
             ;;
@@ -24,6 +25,8 @@ while getopts "e:d:o:x:l:s:p:" opt; do
         s) SIGNAL=$OPTARG
             ;;
         p) X509_USER_PROXY=$OPTARG
+            ;;
+        c) CMSSW=$OPTARG
             ;;
     esac
 done
@@ -45,6 +48,7 @@ test_input "Cross section" "$XSEC" "x"
 test_input "Integ. luminosity" "$LUMI" "l"
 test_input "Signal" "$SIGNAL" "s"
 test_input "Path to proxy" "$X509_USER_PROXY" "p"
+test_input "CMSSW" "$CMSSW" "c"
 
 #now test what has been asked to analyze
 #1. a single file run executable
@@ -55,6 +59,15 @@ if [[ "$DATASET" == *"root://"* ]]; then
 
   filename=$DATASET
   ofilename=${OUTPATH}/$filename"_MA".root
+
+  cd $CMSSW
+  eval `scram r -sh`
+  export X509_USER_PROXY=$X509_USER_PROXY
+  cd -
+
+  echo "CMSSW_BASE is now set to $CMSSW_BASE"
+  echo "PROXY is now set to $X509_USER_PROXY"
+  echo "Executing analysis script as"
   echo "${EXE} $filename $ofilename ${XSEC} ${LUMI} ${SIGNAL}" 
 
 else
