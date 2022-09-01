@@ -8,6 +8,8 @@
 # -l IntLumi of the dataset
 # -s the signal/bkgd flag
 # -p proxy path
+
+echo "start"
 X509_USER_PROXY=/afs/cern.ch/user/g/gdamolin/private/x509up_u151129
 CMSSW=/afs/cern.ch/user/g/gdamolin/CMSSW_12_4_1_patch1/src
 while getopts "e:d:o:x:l:s:p:c:" opt; do
@@ -31,6 +33,7 @@ while getopts "e:d:o:x:l:s:p:c:" opt; do
     esac
 done
 
+echo "stuck in function definition?"
 
 #define a simple function to test the inputs are available
 test_input () {
@@ -41,6 +44,8 @@ test_input () {
       exit -1
   fi
 }
+
+echo "test2"
 test_input "Executable" "$EXE" "e"
 test_input "Dataset" "$DATASET" "d"
 test_input "Output path" "$OUTPATH" "o"
@@ -69,7 +74,7 @@ if [[ "$DATASET" == *"root://"* ]]; then
   echo "CMSSW_BASE is now set to $CMSSW_BASE"
   echo "PROXY is now set to $X509_USER_PROXY"
   echo "Executing analysis script as"
-  echo "${EXE} $filename $ofilename ${XSEC} ${LUMI} ${SIGNAL}" 
+  ${EXE} $filename $ofilename ${XSEC} ${LUMI} ${SIGNAL} 
 
 else
 

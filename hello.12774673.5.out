@@ -1,0 +1,23 @@
+start
+stuck in function definition?
+test2
+Executable = /afs/cern.ch/user/g/gdamolin/jobs_subm/Condor/Mixed_Analysis
+Dataset = root://cms-xrd-global.cern.ch///store/mc/RunIISummer20UL18NanoAODv2/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v15_L1v1-v1/120000/BB50E592-7525-F342-8786-D29B2FDF5B48.root
+Output path = /afs/cern.ch/user/g/gdamolin/Johan/Savehere
+Cross section = 951.5*1000
+Integ. luminosity = 59.83
+Signal = false
+Path to proxy = /afs/cern.ch/user/g/gdamolin/private/x509up_u151129
+CMSSW = /afs/cern.ch/user/g/gdamolin/CMSSW_12_4_1_patch1/src
+Dataset is already a single file, will run executable for it
+/pool/condor/dir_30134
+CMSSW_BASE is now set to /afs/cern.ch/user/g/gdamolin/CMSSW_12_4_1_patch1
+PROXY is now set to /afs/cern.ch/user/g/gdamolin/private/x509up_u151129
+Executing analysis script as
+Background analysis
+Processing entry 0 of 49495
+Number of events discarded by trigger = 27287
+Number of events discarded by selection = 22208
+Number of events passing triggers = 22208
+Number of events passing selection = 0
+Selected events over triggered events = 0

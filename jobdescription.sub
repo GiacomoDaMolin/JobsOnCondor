@@ -8,5 +8,5 @@ output                = $(basedir)/hello.$(ClusterId).$(ProcId).out
 error                 = $(basedir)/hello.$(ClusterId).$(ProcId).err
 log                   = $(basedir)/hello.$(ClusterId).log
 
-+JobFlavour="workday"
++JobFlavour = "longlunch"
 queue arguments from $(basedir)/jobdescription.txt

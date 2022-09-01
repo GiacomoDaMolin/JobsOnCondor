@@ -1,0 +1,41 @@
+start
+stuck in function definition?
+test2
+Executable = /afs/cern.ch/user/g/gdamolin/jobs_subm/Condor/Mixed_Analysis
+Dataset = root://cms-xrd-global.cern.ch///store/mc/RunIISummer20UL18NanoAODv2/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v15_L1v1-v1/280000/6F3AF92C-C46C-7E43-8669-D09184FEE8CF.root
+Output path = /afs/cern.ch/user/g/gdamolin/Johan/Savehere
+Cross section = 951.5*1000
+Integ. luminosity = 59.83
+Signal = false
+Path to proxy = /afs/cern.ch/user/g/gdamolin/private/x509up_u151129
+CMSSW = /afs/cern.ch/user/g/gdamolin/CMSSW_12_4_1_patch1/src
+Dataset is already a single file, will run executable for it
+/pool/condor/dir_23469
+CMSSW_BASE is now set to /afs/cern.ch/user/g/gdamolin/CMSSW_12_4_1_patch1
+PROXY is now set to /afs/cern.ch/user/g/gdamolin/private/x509up_u151129
+Executing analysis script as
+Background analysis
+Processing entry 0 of 1833023
+Processing entry 100000 of 1833023
+Processing entry 200000 of 1833023
+Processing entry 300000 of 1833023
+Processing entry 400000 of 1833023
+Processing entry 500000 of 1833023
+Processing entry 600000 of 1833023
+Processing entry 700000 of 1833023
+Processing entry 800000 of 1833023
+Processing entry 900000 of 1833023
+Processing entry 1000000 of 1833023
+Processing entry 1100000 of 1833023
+Processing entry 1200000 of 1833023
+Processing entry 1300000 of 1833023
+Processing entry 1400000 of 1833023
+Processing entry 1500000 of 1833023
+Processing entry 1600000 of 1833023
+Processing entry 1700000 of 1833023
+Processing entry 1800000 of 1833023
+Number of events discarded by trigger = 1009876
+Number of events discarded by selection = 823130
+Number of events passing triggers = 823147
+Number of events passing selection = 17
+Selected events over triggered events = 2.06524e-05
