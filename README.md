@@ -26,10 +26,6 @@ If all looks good you can submit to condor by doing
 condor_submit jobdescription.sub
 ```
 
-I use the following command: condor_submit CDataset.sub
-In CDataset I call as executable RunDataset.sh, which reads the parameters from the script .txt file and SHOULD parse the dataset and call the main executable (Mixed_Analysis) for each file & respective arguments.
-However the dasgoclient line does not work but I get the parsing error.
-
 ## Directory "python"
 same rationale of main directory but RunDataset is now a python script.
 However, I get a sintax error in the line:
